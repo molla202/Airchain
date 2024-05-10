@@ -142,7 +142,7 @@ sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.junction/config/config.to
 
 ### 🚧Başlatalım
 ```
-sudo systemctl start junctiond && sudo journalctl -u junctiond -f --no-hostname -o cat
+sudo systemctl daemon-reload && sudo systemctl start junctiond && sudo journalctl -u junctiond -f --no-hostname -o cat
 ```
 ### Log
 ```
