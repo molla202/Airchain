@@ -140,6 +140,7 @@ sed -i -e "s/^pruning-keep-recent *=.*/pruning-keep-recent = \"100\"/" $HOME/.ju
 sed -i -e "s/^pruning-interval *=.*/pruning-interval = \"50\"/" $HOME/.junction/config/app.toml
 ```
 ### 🚧Gas ve index ayarı
+```
 sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "10amf"|g' $HOME/.galactica/config/app.toml
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.junction/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.junction/config/config.toml
