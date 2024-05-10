@@ -190,7 +190,7 @@ Not: alttaki kodu düzenleyin sonra üsteki kodu yazıp düzenlediğinizi içine
 }
 ```
 ```
-junctiond tx staking create-validator $HOME/validator.json --from cüzdan-adi --chain-id junction --fees 500amf
+junctiond tx staking create-validator $HOME/validator.json --from cüzdan-adi --chain-id junction --fees 5000amf
 ```
 
 
