@@ -139,7 +139,15 @@ sed -i 's|minimum-gas-prices =.*|minimum-gas-prices = "0.025amf"|g' $HOME/.junct
 sed -i -e "s/prometheus = false/prometheus = true/" $HOME/.junction/config/config.toml
 sed -i -e "s/^indexer *=.*/indexer = \"null\"/" $HOME/.junction/config/config.toml
 ```
-
+### Snap 
+```
+mantrachaind tendermint unsafe-reset-all --home $HOME/.mantrachain
+if http://37.120.189.81/airchain_testnet/air_snap.tar.lz4 | head -n 1 | grep "200" > /dev/null; then
+  curl -L http://37.120.189.81/airchain_testnet/air_snap.tar.lz4 | tar -I lz4 -xf - -C $HOME/.junction
+    else
+  echo no have snap
+fi
+```
 ### 🚧Başlatalım
 ```
 sudo systemctl daemon-reload && sudo systemctl start junctiond && sudo journalctl -u junctiond -f --no-hostname -o cat
