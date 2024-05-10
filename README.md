@@ -86,15 +86,8 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable junctiond
 ```
-### 🚧Ağ ayarları
-```
-junctiond config node tcp://localhost:${J_PORT}657
-junctiond config keyring-backend os
-```
 ### 🚧İnit
 ```
-junctiond config chain-id junction
-junctiond config keyring-backend test
 junctiond init node-adi-yaz --chain-id junction
 ```
 ### 🚧Genesis ve addrbook
